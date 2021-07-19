@@ -1,0 +1,14 @@
+my/app/model/Observer.java
+ my.app.model.Observer
+my/app/Application.java
+ my.app.Application
+my/app/model/WeatherData.java
+ my.app.model.WeatherData
+my/app/model/DisplayElement.java
+ my.app.model.DisplayElement
+my/app/controller/HelloController.java
+ my.app.controller.HelloController
+my/app/model/Subject.java
+ my.app.model.Subject
+my/app/config/SwaggerUiWebMvcConfigurer.java
+ my.app.config.SwaggerUiWebMvcConfigurer
