@@ -15,10 +15,13 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     // https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter
-    implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+    // implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
 
-    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
-    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
+    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.9'
+
+    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-data-rest
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-data-rest', version: '1.5.9'
 
     // https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka
     implementation group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.7.3'
