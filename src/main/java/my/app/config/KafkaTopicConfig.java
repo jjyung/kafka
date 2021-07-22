@@ -1,6 +1,6 @@
 package my.app.config;
 
-import my.app.constant.topic.TOPIC;
+import my.app.constant.topic.Topic;
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,11 +25,11 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic topicBaeldung() {
-        return new NewTopic(TOPIC.BAELDUNG, 1, (short) 1);
+        return new NewTopic(Topic.BAELDUNG, 1, (short) 1);
     }
 
     @Bean
     public NewTopic topicWeather() {
-        return new NewTopic(TOPIC.WEATHER, 1, (short) 1);
+        return new NewTopic(Topic.WEATHER, 1, (short) 1);
     }
 }

@@ -1,6 +1,6 @@
 package my.app.service;
 
-import my.app.constant.topic.TOPIC;
+import my.app.constant.topic.Topic;
 import my.app.model.weather.WeatherData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -18,7 +18,7 @@ public class WeatherStationService {
 
     public void produceAnObservation() {
         weatherDataKafkaTemplate.send(
-            TOPIC.WEATHER,
+            Topic.WEATHER,
             new WeatherData(
                 Math.random() * 40d,
                 Math.random()

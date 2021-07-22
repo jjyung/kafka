@@ -1,6 +1,8 @@
 package my.app.manager;
 
-import my.app.constant.topic.TOPIC;
+import my.app.constant.topic.Topic;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -11,7 +13,7 @@ import org.springframework.util.concurrent.ListenableFuture;
 
 @Component
 public class KafkaManager {
-
+    private static final Logger logger = LoggerFactory.getLogger(KafkaManager.class);
     private final KafkaTemplate<String, String> kafkaTemplate;
 
     @Autowired
@@ -23,9 +25,8 @@ public class KafkaManager {
         return kafkaTemplate.send(topic, data);
     }
 
-    @KafkaListener(topics = { TOPIC.BAELDUNG }, groupId = "foo")
+    @KafkaListener(topics = { Topic.BAELDUNG }, groupId = "foo")
     public void listenGroupFoo(String message) {
-        // TODO logger?
-        System.out.println("Received Message in group foo: " + message);
+        logger.info("Received Message in group foo: {}", message);
     }
 }
